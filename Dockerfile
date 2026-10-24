@@ -1,0 +1,5 @@
+FROM python:3.12-slim
+
+RUN python3 -m venv venv && pip install -r requirements.txt
+
+CMD [ "flask", "--app", "run", "run", "--host=0.0.0.0", "--port=5000" ]
